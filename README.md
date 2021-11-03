@@ -31,3 +31,5 @@
 **Extra advantage**: You don't need to store your passwords anywhere
 
 **Note**: Longer the master password, stronger the hash
+
+**Credits**: @iamgroot9 for the hashing algorithm
