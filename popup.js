@@ -1,7 +1,7 @@
 const hasher = (masterPassword, service) => {
+  console.log("Getting called");
   let t = "";
   let n = 0;
-  let temp;
   for (let i = 0; i < service.length; i++) {
     n += -1 * service[i].charCodeAt(0);
   }
@@ -26,6 +26,7 @@ const hasher = (masterPassword, service) => {
     if ((i === 0 || i == masterPassword.length - 1) && m === 32) {
       m += 5;
     }
+    m = Math.abs(m);
     while (m < 32) {
       m *= 2;
     }
@@ -41,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const masterPasswordInputField = document.getElementById("master-password");
   const serviceInputField = document.getElementById("service");
   const generateButton = document.getElementById("generate");
-  const generatedPasswordDiv = document.getElementById("generated-password");
 
   masterPasswordInputField.focus();
 
